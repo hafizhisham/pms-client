@@ -22,6 +22,16 @@ const EditUser = () => {
     navigate("/my-account");
   };
 
+  const [name, setName] = useState(filteredProject?.name);
+  const [email, setEmail] = useState(filteredProject?.email);
+
+  const handleChange1 = (event) => {
+    setName(event.target.value);
+  };
+  const handleChange2 = (event) => {
+    setEmail(event.target.value);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const email = event.target[0].value;
@@ -119,8 +129,9 @@ const EditUser = () => {
                 >
                   <input
                     id="name"
-                    placeholder={user?.name}
                     type="text"
+                    value={name}
+                    onChange={handleChange1}
                     style={{ backgroundColor: "white", width: "400px" }}
                   />
                 </p>
@@ -136,8 +147,9 @@ const EditUser = () => {
                 >
                   <input
                     id="email"
-                    placeholder={user?.email}
                     type="text"
+                    value={email}
+                    onChange={handleChange2}
                     style={{ backgroundColor: "white", width: "400px" }}
                   />
                 </p>
