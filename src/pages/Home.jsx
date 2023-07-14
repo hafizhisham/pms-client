@@ -38,8 +38,9 @@ const Home = () => {
           alignItems: "center",
           flexDirection: "column",
           gap: "30px",
-          backgroundImage: src={BackImage},
+          backgroundImage: `url(${BackImage})`
         }}
+        src={BackImage}
       >
         <h1
           style={{
