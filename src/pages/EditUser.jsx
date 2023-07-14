@@ -18,7 +18,7 @@ const EditUser = () => {
   const handleSucesssNavigation = () => {
     navigate("/my-account");
   };
-  const handleNavigate = (path) => {
+  const handleNavigate = () => {
     navigate("/my-account");
   };
 
@@ -34,14 +34,15 @@ const EditUser = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const email = event.target[0].value;
-    const formObject = { email };
+    const name = event.target[0].value;
+    const email = event.target[1].value;
+    const formObject = { name, email };
 
     axios
         .put(
           `${HOST}/api/users/${user?.username}`,
           {
-            email,
+            name, email,
           },
           {
             headers: { Authorization: `Bearer ${jwt}` },
