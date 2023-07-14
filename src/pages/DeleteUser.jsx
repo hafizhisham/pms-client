@@ -104,7 +104,6 @@ const DeleteUser = () => {
               >
                 {user?.username || "no data"}
               </p>
-              {isAdmin && <AdminControl />}
             </div>
             <div style={{ marginTop: "1rem" }}>
               <p style={{ fontSize: "1.3rem" }}>Email :</p>
@@ -118,15 +117,7 @@ const DeleteUser = () => {
               >
                 {user?.email || "no data"}
               </p>
-              {isAdmin && <AdminControl />}
             </div>
-            {/* <div style={{ marginTop: "1rem" }}>
-              <p>Admin status</p>
-              <p style={{ display: "inline", fontWeight: "bold" }}>
-                {user?.isAdmin ? "True" : "False"}
-              </p>
-              {isAdmin && <AdminControl />}
-            </div> */}
           </div>
           <div
             style={{
