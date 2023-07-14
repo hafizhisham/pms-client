@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Logo from "../components/Logo";
 import FolderImage from "/images/file1.png"
+import BackImage from "/images/bg2.jpg"
 
 const Home = () => {
   const navigate = useNavigate();
@@ -27,10 +28,7 @@ const Home = () => {
         }}
       >
         <Logo />
-        {/* <div style={{ display: "flex", gap: "4px", fontSize: "15px", }}>
-          <button onClick={() => handleNavigate("login")}>Login</button>
-          <button onClick={() => handleNavigate("register")}>New user?</button>
-        </div> */}
+
       </div>
       <div
         style={{
@@ -40,7 +38,7 @@ const Home = () => {
           alignItems: "center",
           flexDirection: "column",
           gap: "30px",
-          backgroundImage: "url(./images/bg2.jpg)",
+          backgroundImage: src={BackImage},
         }}
       >
         <h1
