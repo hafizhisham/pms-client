@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Logo from "../components/Logo";
+import FolderImage from "./images/file1.png"
 
 const Home = () => {
   const navigate = useNavigate();
@@ -52,7 +53,7 @@ const Home = () => {
         </h1>
         <img
           style={{ height: "200px", width: "200px" }}
-          src="images/file1.png"
+          src={FolderImage}
           alt="React Image"
         />
         <div style={{ display: "flex", gap: "30px", fontSize: "1.5rem" }}>
