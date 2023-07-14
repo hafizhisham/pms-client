@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+input {
+  all: unset;
+  min-height: 30px;
+  border-style: solid;
+  border-color: gray;
+  border-radius: 4px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+button {
+  all: unset;
+  background-color: white;
+  border-style: solid;
+  border-color: gray;
+  border-radius: 4px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 30px;
+  font-weight: medium;
+  cursor: pointer;
+  box-sizing: border-box;
+}
