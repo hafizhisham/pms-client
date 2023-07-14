@@ -106,7 +106,6 @@ const MyProject = () => {
             }}
           >
             <h3 style={{ fontSize: "1.8rem" }}>Project Detail</h3>
-            {isAdmin && <AdminControl />}
           </div>
           <div
             style={{

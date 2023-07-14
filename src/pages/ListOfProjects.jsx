@@ -132,19 +132,6 @@ const ProjectCard = ({ project }) => {
           {project?.client || "no data"}
         </p>
       </div>
-      {/* <div style={{ marginTop: "1rem" }}>
-        <p style={{ fontSize: "1.2rem" }}>Phone Number :</p>
-        <p
-          style={{
-            display: "inline",
-            fontWeight: "bold",
-            fontSize: "1.1rem",
-            color: "#ff4800",
-          }}
-        >
-          {project?.phone || "no data"}
-        </p>
-      </div> */}
       <div style={{ marginTop: "1rem" }}>
         <p style={{ fontSize: "1.2rem" }}>Address :</p>
         <p
@@ -158,32 +145,6 @@ const ProjectCard = ({ project }) => {
           {project?.address || "no data"}
         </p>
       </div>
-      {/* <div style={{ marginTop: "1rem" }}>
-        <p style={{ fontSize: "1.2rem" }}>Staff :</p>
-        <p
-          style={{
-            display: "inline",
-            fontWeight: "bold",
-            fontSize: "1.1rem",
-            color: "#ff4800",
-          }}
-        >
-          {project?.staff || "no data"}
-        </p>
-      </div> */}
-      {/* <div style={{ marginTop: "1rem" }}>
-        <p style={{ fontSize: "1.2rem" }}>Status :</p>
-        <p
-          style={{
-            display: "inline",
-            fontWeight: "bold",
-            fontSize: "1.1rem",
-            color: "#ff4800",
-          }}
-        >
-          {project?.status || "no data"}
-        </p>
-      </div> */}
     </div>
   );
 };
