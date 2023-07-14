@@ -6,6 +6,8 @@ import { HOST } from "../api";
 import Header from "../components/Header";
 import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
+import BackImage from "/images/bg2.jpg"
+
 
 const EditUser = () => {
   const [isLoading, setLoading] = useState(false);
@@ -59,7 +61,7 @@ const EditUser = () => {
           height: "89%",
           alignItems: "center",
           padding: "3rem",
-          backgroundImage: "url(./images/bg2.jpg)",
+          backgroundImage: `url(${BackImage})`,
         }}
       >
         <h1 style={{ fontSize: "2.2rem", fontWeight: "bolder" }}>

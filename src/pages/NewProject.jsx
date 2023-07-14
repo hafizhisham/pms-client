@@ -5,6 +5,8 @@ import { HOST } from "../api";
 import Header from "../components/Header";
 import useLocalStorage from "../hook/useLocalStorage";
 import Cookies from "js-cookie";
+import BackImage from "/images/bg2.jpg"
+
 
 const NewProject = () => {
   const jwt = Cookies.get("token");
@@ -14,9 +16,6 @@ const NewProject = () => {
   const handleSucesssNavigation = () => {
     navigate("/listofprojects");
   };
-  // const handleNavigateToLogin = () => {
-  //   navigate("/login");
-  // };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -67,7 +66,7 @@ const NewProject = () => {
           alignItems: "center",
           padding: "3rem",
           paddingTop: "25px",
-          backgroundImage: "url(./images/bg2.jpg)",
+          backgroundImage: `url(${BackImage})`,
         }}
       >
         <div

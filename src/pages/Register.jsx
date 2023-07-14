@@ -3,6 +3,8 @@ import Logo from "../components/Logo";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { HOST } from "../api";
+import BackImage from "/images/bg2.jpg"
+
 
 const Register = () => {
   const [isLoading, setLoading] = useState(false);
@@ -64,7 +66,7 @@ const Register = () => {
           alignItems: "center",
           padding: "3rem",
           paddingTop: "80px",
-          backgroundImage: "url(./images/bg2.jpg)"
+          backgroundImage: `url(${BackImage})`,
         }}
       >
       <div

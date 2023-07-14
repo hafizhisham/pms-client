@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import Logo from "../components/Logo";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-// import useLocalStorage from "../hook/useLocalStorage";
 import { HOST } from "../api";
 import Cookies from "js-cookie";
+import BackImage from "/images/bg2.jpg"
+
 
 const Login = () => {
   const [isLoading, setLoading] = useState(false);
-  // const [jwt, setJwt] = useLocalStorage("token", "");
-  // const [jwt, setJwt] = Cookies.set("token", "");
   const navigate = useNavigate();
   const handleSucesssNavigation = () => {
     navigate("/my-account");
@@ -31,7 +30,6 @@ const Login = () => {
         console.info(response.data.jwt);
         // navigate to my account page when success
         Cookies.set("token", response.data.jwt);
-        // setJwt(response.data);
         handleSucesssNavigation();
       })
       .catch(function (error) {
@@ -64,7 +62,7 @@ const Login = () => {
           alignItems: "center",
           padding: "3rem",
           paddingTop: "150px",
-          backgroundImage: "url(./images/bg2.jpg)"
+          backgroundImage: `url(${BackImage})`,
         }}
       >
         <div

@@ -6,6 +6,8 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { HOST } from "../api";
 import Header from "../components/Header";
 import Cookies from "js-cookie";
+import BackImage from "/images/bg2.jpg"
+
 
 const MyProject = () => {
   const [isLoading, setLoading] = useState(false);
@@ -25,46 +27,12 @@ const MyProject = () => {
     navigate("/listofprojects");
   };
 
-  // const fetchProjectDetail = () => {
-  //   // get jwt from localStorage
-  //   console.log(jwt);
-  //   console.log(projects);
-
-  //   // run get api
-  //   axios
-  //     .get(`${HOST}/api/projects/`, {
-  //       headers: { Authorization: `Bearer ${jwt}` },
-  //     })
-  //     .then(function (response) {
-  //       // handle success
-  //       console.info(response.data.data);
-  //       setProjects(response.data.data);
-  //       // setAdmin(response.data.user.isAdmin);
-  //     })
-  //     .catch(function (error) {
-  //       // handle error
-  //       console.error(error);
-  //       handleNavigateToLogin();
-  //     })
-  //     .finally(function () {
-  //       // always executed
-  //     });
-  // };
-
-  // useEffect(() => {
-  //   fetchProjectDetail();
-  // }, [jwt]);
-
   const handleDeleteProject = () => {
     const id = filteredProject?.id;
-    // const jwt = Cookies.get("token");
 
     axios
       .delete(
         `${HOST}/api/projects/${id}`,
-        // {
-        //   id,
-        // },
         {
           headers: { Authorization: `Bearer ${jwt}` },
         }
@@ -92,7 +60,7 @@ const MyProject = () => {
           height: "89%",
           alignItems: "center",
           padding: "3rem",
-          backgroundImage: "url(./images/bg2.jpg)",
+          backgroundImage: `url(${BackImage})`,
         }}
       >
         <h1 style={{ fontSize: "2.2rem", fontWeight: "bolder" }}>Projects</h1>

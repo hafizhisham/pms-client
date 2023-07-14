@@ -6,6 +6,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import pluralize from "pluralize";
 import Cookies from "js-cookie";
+import BackImage from "/images/bg2.jpg"
+
 
 const Users = () => {
   const [user] = useLocalStorage("userData", null);
@@ -55,7 +57,7 @@ const Users = () => {
           height: "89%",
           alignItems: "center",
           padding: "3rem",
-          backgroundImage: "url(./images/bg2.jpg)",
+          backgroundImage: `url(${BackImage})`,
         }}
       >
         <h1>

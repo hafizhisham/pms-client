@@ -6,6 +6,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import pluralize from "pluralize";
 import Cookies from "js-cookie";
+import BackImage from "/images/bg2.jpg"
+
 
 const ListOfProjects = () => {
   const [user] = useLocalStorage("userData", null);
@@ -56,7 +58,7 @@ const ListOfProjects = () => {
           flexDirection: "column",
           alignItems: "center",
           padding: "3rem",
-          backgroundImage: "url(./images/bg2.jpg)",
+          backgroundImage: `url(${BackImage})`,
         }}
       >
         <h1>
@@ -89,7 +91,6 @@ const ListOfProjects = () => {
 
 const ProjectCard = ({ project }) => {
   const [jwt] = useLocalStorage("token", "");
-  const [isLoading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   return (

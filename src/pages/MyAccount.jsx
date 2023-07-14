@@ -6,6 +6,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { HOST } from "../api";
 import Header from "../components/Header";
 import Cookies from "js-cookie";
+import BackImage from "/images/bg2.jpg"
+
 
 const MyAccount = () => {
   // const [jwt, setJwt] = useLocalStorage("token", "");
@@ -86,7 +88,7 @@ const MyAccount = () => {
           height: "89%",
           alignItems: "center",
           padding: "3rem",
-          backgroundImage: "url(./images/bg2.jpg)",
+          backgroundImage: `url(${BackImage})`,
         }}
       >
         <h1 style={{ fontSize: "2.2rem", fontWeight: "bolder" }}>
