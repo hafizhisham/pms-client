@@ -6,7 +6,6 @@ import { HOST } from "../api";
 import Header from "../components/Header";
 import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
-// import authorizeApi from "../api/authorizeApi";
 
 const ResetPassword = () => {
   const [isLoading, setLoading] = useState(false);
@@ -106,13 +105,24 @@ const ResetPassword = () => {
               onSubmit={handleSubmit}
             >
               <div style={{ marginTop: "1rem" }}>
-                <p style={{ fontSize: "1.4rem" }}>Email :</p>
+                <p style={{ fontSize: "1.4rem" }}>Name :</p>
                 <p
                   style={{
                     display: "inline",
                     fontWeight: "bold",
                     fontSize: "1.5rem",
                     color: "#ff4800",
+                  }}
+                >
+                  {user?.name || "no data"}
+                </p>
+                <p style={{ fontSize: "1.4rem", marginTop:"1rem" }}>Email :</p>
+                <p
+                  style={{
+                    display: "inline",
+                    fontWeight: "bold",
+                    fontSize: "1.5rem",
+                    color: "#ff4800"
                   }}
                 >
                   {user?.email || "no data"}

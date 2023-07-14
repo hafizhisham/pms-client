@@ -106,7 +106,24 @@ const EditUser = () => {
               onSubmit={handleSubmit}
             >
               <div style={{ marginTop: "1rem" }}>
-                <p style={{ fontSize: "1.4rem" }}>Email :</p>
+              <p style={{ fontSize: "1.4rem" }}>Name :</p>
+                <p
+                  style={{
+                    display: "inline",
+                    fontWeight: "bold",
+                    fontSize: "1.5rem",
+                    color: "#ff4800",
+                  }}
+                >
+                  <input
+                    id="name"
+                    placeholder={user?.name}
+                    type="text"
+                    style={{ backgroundColor: "white", width: "400px" }}
+                  />
+                </p>
+
+                <p style={{ fontSize: "1.4rem", marginTop:"1.2rem" }}>Email :</p>
                 <p
                   style={{
                     display: "inline",

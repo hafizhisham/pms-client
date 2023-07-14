@@ -78,32 +78,7 @@ const Users = () => {
 };
 
 const UserCard = ({ user }) => {
-  // const [jwt] = useLocalStorage("token", "");
-  // const [isLoading, setLoading] = useState(false);
-  // const navigate = useNavigate();
-  // fetch information from api/users/download/id
-  // const handleClickUser = () => {
-  //   setLoading(true);
-  //   // run get api
-  //   axios
-  //     .get(`${HOST}/api/users/download/${user.id}`, {
-  //       headers: { Authorization: `Bearer ${jwt}` },
-  //     })
-  //     .then(function (response) {
-  //       // handle success
-  //       console.info(response.data.data);
-  //     })
-  //     .catch(function (error) {
-  //       // handle error
-  //       console.error(error);
-  //       if (error.response.status === 401) {
-  //         navigate("login");
-  //       }
-  //     })
-  //     .finally(function () {
-  //       setLoading(false);
-  //     });
-  // };
+
   return (
     <div
       style={{
@@ -116,6 +91,12 @@ const UserCard = ({ user }) => {
       }}
     >
       <div>
+        <p style={{fontSize: "1.2rem"}}>Name :</p>
+        <p style={{ display: "inline", fontWeight: "bold", fontSize: "1.1rem", color: "#ff4800" }}>
+          {user?.name || "no data"}
+        </p>
+      </div>
+      <div style={{ marginTop: "1rem" }}>
         <p style={{fontSize: "1.2rem"}}>Username :</p>
         <p style={{ display: "inline", fontWeight: "bold", fontSize: "1.1rem", color: "#ff4800" }}>
           {user?.username || "no data"}

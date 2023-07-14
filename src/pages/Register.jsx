@@ -13,16 +13,18 @@ const Register = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const email = event.target[0].value;
-    const username = event.target[1].value;
-    const password = event.target[2].value;
-    const formObject = { email, username, password };
+    const name = event.target[0].value;
+    const email = event.target[1].value;
+    const username = event.target[2].value;
+    const password = event.target[3].value;
+    const formObject = { name, email, username, password };
 
     // send formObject to api
     setLoading(true);
     // async function then = Promise:resolved, catch = Promise:reject, finally = Promise:fetched
     axios
       .post(`${HOST}/api/register`, {
+        name,
         email,
         username,
         password,
@@ -69,7 +71,7 @@ const Register = () => {
         style={{
           display: "flex",
           flexDirection: "column",
-          height: "380px",
+          height: "450px",
           width: "500px",
           paddingTop: "1.5rem",
           alignItems: "center",
@@ -91,6 +93,17 @@ const Register = () => {
               flexDirection: "column",
               gap: "0.5rem",
               marginTop: "2.5rem",
+            }}
+          >
+            <label htmlFor="username">Name</label>
+            <input id="name" type="text" style={{backgroundColor: "white",}}/>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "0.5rem",
+              marginTop: "1rem",
             }}
           >
             <label htmlFor="email">Email</label>

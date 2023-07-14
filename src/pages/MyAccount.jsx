@@ -60,15 +60,9 @@ const MyAccount = () => {
   const handleDeleteUser = () => {
     const username = user?.username;
     axios
-      .delete(
-        `${HOST}/api/users/${user?.username}`,
-        // {
-        //   username,
-        // },
-        {
-          headers: { Authorization: `Bearer ${jwt}` },
-        }
-      )
+      .delete(`${HOST}/api/users/${user?.username}`, {
+        headers: { Authorization: `Bearer ${jwt}` },
+      })
       .then(function (response) {
         console.info(response.data);
         // navigate to my account page when success
@@ -120,7 +114,20 @@ const MyAccount = () => {
               backgroundColor: "#eeeeee",
             }}
           >
-            <div>
+             <div style={{ marginTop: "1rem" }}>
+              <p style={{ fontSize: "1.3rem" }}>Name :</p>
+              <p
+                style={{
+                  display: "inline",
+                  fontWeight: "bold",
+                  fontSize: "1.4rem",
+                  color: "#ff4800",
+                }}
+              >
+                {user?.name || "no data"}
+              </p>
+            </div>
+            <div style={{ marginTop: "1rem" }}>
               <p style={{ fontSize: "1.3rem" }}>Username :</p>
               <p
                 style={{
