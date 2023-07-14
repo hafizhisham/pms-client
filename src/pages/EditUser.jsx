@@ -22,8 +22,8 @@ const EditUser = () => {
     navigate("/my-account");
   };
 
-  const [name, setName] = useState(filteredProject?.name);
-  const [email, setEmail] = useState(filteredProject?.email);
+  const [name, setName] = useState(user?.name);
+  const [email, setEmail] = useState(user?.email);
 
   const handleChange1 = (event) => {
     setName(event.target.value);
