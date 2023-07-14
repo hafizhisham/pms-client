@@ -12,7 +12,7 @@ const NewProject = () => {
   const navigate = useNavigate();
   const [user, setUser] = useLocalStorage("userData", null);
   const handleSucesssNavigation = () => {
-    navigate("/listofproject");
+    navigate("/listofprojects");
   };
   // const handleNavigateToLogin = () => {
   //   navigate("/login");
