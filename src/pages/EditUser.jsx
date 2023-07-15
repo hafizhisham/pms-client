@@ -12,7 +12,6 @@ import BackImage from "/images/bg2.jpg"
 const EditUser = () => {
   const [isLoading, setLoading] = useState(false);
   const jwt = Cookies.get("token");
-  const [isAdmin, setAdmin] = useLocalStorage("isAdmin", false);
   const [user, setUser] = useLocalStorage("userData", null);
   const navigate = useNavigate();
   const handleSucesssNavigation = () => {

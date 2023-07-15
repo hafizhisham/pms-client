@@ -54,7 +54,7 @@ const Users = () => {
         style={{
           display: "flex",
           flexDirection: "column",
-          height: "89%",
+          height: "100%",
           alignItems: "center",
           padding: "3rem",
           backgroundImage: `url(${BackImage})`,
