@@ -1,34 +1,14 @@
 import React from "react";
-// import { useState } from "react";
-import useLocalStorage from "../hook/useLocalStorage";
-import { HOST } from "../api";
 import { useNavigate } from "react-router-dom";
 import Logo from "../components/Logo";
 import FolderImage from "/images/file1.png";
 import BackImage from "/images/bg2.jpg";
-import axios from "axios";
 
 const Home = () => {
   const navigate = useNavigate();
   const handleNavigate = (path) => {
     navigate(path);
   };
-  const [ipAddress, setIpAddress] = useLocalStorage("ipData", null);
-  console.log(ipAddress);
-
-    axios
-      .get(`${HOST}/api/ipaddress`, {
-      })
-      .then(function (response) {
-        console.info(response.data.ip);
-        setIpAddress(response.data.ip);
-
-      })
-      .catch(function (error) {
-        console.error(error);
-      })
-      .finally(function () {
-      });
 
   return (
     <div
@@ -61,14 +41,6 @@ const Home = () => {
           backgroundImage: `url(${BackImage})`,
         }}
       >
-        <div
-          style={{
-            fontSize: "17px",
-            marginTop: "20px",
-          }}
-        >
-          You IP Adrees is : {ipAddress}
-        </div>
         <h1
           style={{
             fontSize: "2.8rem",
