@@ -77,6 +77,7 @@ const EditProject = () => {
       .then(function (response) {
         console.info(response.data);
         // navigate to my account page when success
+        alert("You have update project information");
         handleSucesssNavigation();
       })
       .catch(function (error) {

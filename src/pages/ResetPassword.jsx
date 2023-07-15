@@ -40,6 +40,7 @@ const ResetPassword = () => {
       .then(function (response) {
         console.info(response.data);
         // navigate to my account page when success
+        alert("You have reset your password account");
         handleSucesssNavigation();
       })
       .catch(function (error) {

@@ -50,6 +50,7 @@ const EditUser = () => {
         .then(function (response) {
           console.info(response.data);
           // navigate to my account page when success
+          alert("You have update your user information");
           handleSucesssNavigation();
           
         })

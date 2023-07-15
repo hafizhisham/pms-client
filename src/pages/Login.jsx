@@ -34,6 +34,7 @@ const Login = () => {
       })
       .catch(function (error) {
         console.error(error);
+        alert("You have entered the wrong Username or Password");
       })
       .finally(function () {
         setLoading(false);

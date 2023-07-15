@@ -40,6 +40,7 @@ const MyProject = () => {
       .then(function (response) {
         console.info(response.data);
         // navigate to my account page when success
+        alert("You have delete this project");
         handleNavigate1();
       })
       .catch(function (error) {
@@ -199,6 +200,7 @@ const MyProject = () => {
                 fontSize: "1.1rem",
                 fontWeight: "bold",
               }}
+              
               onClick={() => handleDeleteProject()}
             >
               Delete Project?

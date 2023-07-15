@@ -6,8 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { HOST } from "../api";
 import Header from "../components/Header";
 import Cookies from "js-cookie";
-import BackImage from "/images/bg2.jpg"
-
+import BackImage from "/images/bg2.jpg";
 
 const MyAccount = () => {
   // const [jwt, setJwt] = useLocalStorage("token", "");
@@ -68,6 +67,7 @@ const MyAccount = () => {
       .then(function (response) {
         console.info(response.data);
         // navigate to my account page when success
+        alert("You have delete your account. Please sign up again");
         handleNavigate3();
       })
       .catch(function (error) {
@@ -116,7 +116,7 @@ const MyAccount = () => {
               backgroundColor: "#eeeeee",
             }}
           >
-             <div style={{ marginTop: "1rem" }}>
+            <div style={{ marginTop: "1rem" }}>
               <p style={{ fontSize: "1.3rem" }}>Name :</p>
               <p
                 style={{
